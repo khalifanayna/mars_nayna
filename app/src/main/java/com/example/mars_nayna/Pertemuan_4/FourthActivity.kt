@@ -46,7 +46,7 @@ class FourthActivity : AppCompatActivity() {
         )
 
         binding.btnKembali.setOnClickListener {
-            val intent = Intent(this, FourthActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
