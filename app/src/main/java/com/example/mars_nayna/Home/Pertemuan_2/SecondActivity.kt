@@ -1,4 +1,4 @@
-package com.example.mars_nayna.Pertemuan_2
+package com.example.mars_nayna.Home.Pertemuan_2
 
 import android.os.Bundle
 import android.widget.Button

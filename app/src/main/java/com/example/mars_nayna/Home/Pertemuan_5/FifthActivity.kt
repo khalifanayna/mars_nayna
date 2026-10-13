@@ -1,4 +1,4 @@
-package com.example.mars_nayna.Pertemuan_5
+package com.example.mars_nayna.Home.Pertemuan_5
 
 import android.content.Intent
 import android.os.Bundle

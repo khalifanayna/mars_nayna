@@ -8,8 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.mars_nayna.databinding.ActivityMainBinding
-import com.example.mars_nayna.Pertemuan_4.FourthActivity
-import com.example.mars_nayna.Pertemuan_5.FifthActivity
+import com.example.mars_nayna.Home.Pertemuan_4.FourthActivity
+import com.example.mars_nayna.Home.Pertemuan_5.FifthActivity
+import com.example.mars_nayna.Home.Pertemuan_6.SixthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -43,6 +44,12 @@ class MainActivity : AppCompatActivity() {
         binding.btnToFifth.setOnClickListener{
             val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.btnToSixth.setOnClickListener {
+            val intent = Intent(this, SixthActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         binding.btnLogout.setOnClickListener {

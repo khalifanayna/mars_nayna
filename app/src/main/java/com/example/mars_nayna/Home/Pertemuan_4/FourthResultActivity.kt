@@ -1,4 +1,4 @@
-package com.example.mars_nayna.Pertemuan_4
+package com.example.mars_nayna.Home.Pertemuan_4
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.mars_nayna.R
-import com.example.mars_nayna.databinding.ActivityFourthBinding
 import com.example.mars_nayna.databinding.ActivityFourthResultBinding
 
 class FourthResultActivity : AppCompatActivity() {

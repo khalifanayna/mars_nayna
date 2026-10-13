@@ -7,9 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.mars_nayna.Pertemuan_5.FifthActivity
 import com.example.mars_nayna.databinding.ActivityAuthBinding
-import com.example.mars_nayna.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class AuthActivity : AppCompatActivity() {
@@ -36,7 +34,7 @@ class AuthActivity : AppCompatActivity() {
         val isLogin = sharedPref.getBoolean("isLogin", false)
         if (isLogin) {
             //Panggil Intent untuk ke MainActivity
-            val i = Intent(this, MainActivity::class.java)
+            val i = Intent(this, BaseActivity::class.java)
             startActivity(i)
             finish()
         }
@@ -53,7 +51,7 @@ class AuthActivity : AppCompatActivity() {
                 editor.apply()
 
                 //berpindah ke halaman
-                val i = Intent(this, MainActivity::class.java)
+                val i = Intent(this, BaseActivity::class.java)
                 startActivity(i)
                 Toast.makeText(this, "${username} - ${password}", Toast.LENGTH_LONG).show()
             } else {
