@@ -1,8 +1,7 @@
+
 package com.example.mars_nayna
 
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,7 +11,6 @@ import com.example.mars_nayna.Home.HomeFragment
 import com.example.mars_nayna.Message.MessageFragment
 import com.example.mars_nayna.More.MoreFragment
 import com.example.mars_nayna.databinding.ActivityBaseBinding
-import com.example.mars_nayna.databinding.ActivityMainBinding
 
 class BaseActivity : AppCompatActivity() {
 
@@ -24,54 +22,49 @@ class BaseActivity : AppCompatActivity() {
 
         binding = ActivityBaseBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
+            v.setPadding(
+                systemBars.left,
+                systemBars.top,
+                systemBars.right,
+                0
+            )
             insets
         }
+
+        // Menampilkan HomeFragment pertama kali
         replaceFragment(HomeFragment())
+
+        // Mengatur navigasi bagian bawah
         binding.bottomNavView.setOnItemSelectedListener {
             when (it.itemId) {
+
                 R.id.home -> {
                     replaceFragment(HomeFragment())
                     true
                 }
+
                 R.id.message -> {
                     replaceFragment(MessageFragment())
                     true
                 }
+
                 R.id.more -> {
                     replaceFragment(MoreFragment())
                     true
                 }
-                else ->false
+
+                else -> false
             }
         }
-
-        binding.bottomNavView.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.home -> {
-                    Toast.makeText(this, "Home Clicked", Toast.LENGTH_SHORT).show()
-                    true
-                }
-                R.id.message -> {
-                    Toast.makeText(this, "Message Clicked", Toast.LENGTH_SHORT).show()
-                    true
-                }
-                R.id.more -> {
-                    Toast.makeText(this, "More Clicked", Toast.LENGTH_SHORT).show()
-                    true
-                }
-                else -> false // return false jika item tidak ada yang di klik
-            }
-
-        }
-
     }
+
+    // Fungsi untuk mengganti Fragment
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)
-            //.addToBackStack(null) -> ini kita nonaktifkan agar saat back langsung keluar aplikasi
             .commit()
     }
 }
