@@ -37,6 +37,9 @@ android {
 dependencies {
     implementation("androidx.gridlayout:gridlayout:1.0.0")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.viewpager2)
     annotationProcessor ("com.github.bumptech.glide:compiler:4.16.0")
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
@@ -47,4 +50,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("com.tbuonomo:dotsindicator:5.1.0")
 }

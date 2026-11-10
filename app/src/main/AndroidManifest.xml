@@ -71,6 +71,11 @@
             android:name=".Home.Pertemuan_11.EleventhActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Message.Tutorial.TutorialMessageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Mars_nayna"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
